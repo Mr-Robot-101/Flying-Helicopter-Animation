@@ -18,8 +18,8 @@ body {
   width: 100rem;
   height: 80rem;
   background: rgb(88, 179, 253) url(https://cdn.pixabay.com/photo/2021/11/20/07/19/city-6811038_960_720.png);
-  background-size: 100rem auto;
-  background-position: ;
+  background-size: 10rem auto;
+  background-position:0 100%;
   background-repeat: repeat-x;
   display: grid;
   place-items: center;
@@ -27,13 +27,14 @@ body {
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  border-radius: .5rem 10rem;
 }
 @keyframes bg-anim {
   0% {
-    background-position: ;
+    background-position:0 100% ;
   }
   100% {
-    background-position: ;
+    background-position:150rem 100% ;
   }
 }
 .helicopter div{
@@ -43,6 +44,7 @@ body {
  width: 80rem;
  height: 60rem;
  perspective: 50rem;
+ transform: rotateY(-15deg);
 }
 .blade {
   width: 40rem;
@@ -109,6 +111,22 @@ body {
   position: absolute;
   top: 0.2rem;
   border-radius: 100% 0 40% 0;
+  animation-name:cokpit-anim;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+}
+@keyframes cokpit-anim {
+  0% {
+    background-color: blue;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: tomato;
+  }
 }
 .landing-skid {
   width: 23rem;
@@ -178,5 +196,31 @@ left: 18rem;
   }
   100% {
     transform: rotateX(360deg);
+  }
+}
+.light {
+  height: 1rem;
+  width: 1rem;
+  background-color: red;
+  top: 22.45rem;
+  left: 66rem;
+  border-radius: 50%;
+  animation-name:light;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  
+}
+
+@keyframes light {
+  0% {
+    background-color: blue;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: tomato;
   }
 }
